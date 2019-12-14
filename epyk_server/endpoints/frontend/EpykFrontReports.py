@@ -7,9 +7,8 @@ import json, importlib, sys
 @EpykMain.config_required
 def index(to_json=False):
   rptObj = Report()
-  rptObj.ui.title('Index', level=2)
-  rptObj.ui.title('Welcome To Epyk Engine', (120, 'px'))
-  regNtwrk, edgesReg = EpykMain.getScripts()
+  rptObj.ui.title('Welcome To Epyk Engine', (120, 'px')).css('text-align', 'center')
+  # regNtwrk, edgesReg = EpykMain.getScripts()
   result = rptObj.outs._to_html_obj()
   result['header'] = rptObj.headers
   if to_json:

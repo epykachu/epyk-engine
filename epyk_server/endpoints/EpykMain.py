@@ -1,5 +1,5 @@
 import re, os, importlib
-epyk_config = {'USER_REPORTS_PATH': {"MAIN": r'C:\Users\nelso\PycharmProjects\youpi\AresServer\ares_server\repo'}, 'URL': {'ares-report': ['', '']}}
+epyk_config = None
 
 
 class MissingEpykConfigException(Exception):
