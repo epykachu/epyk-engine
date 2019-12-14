@@ -1,7 +1,14 @@
 from epyk.core.Page import Report
 from epyk.core.html.templates import HtmlTmplBase
+from epyk_server.endpoints import EpykMain
 import json
 
+
+
+
+
+
+@EpykMain.config_required
 def index(to_json=False):
   rptObj = Report()
   rptObj.ui.title('title')
@@ -16,4 +23,5 @@ def run_report():
   pass
 
 if __name__ == '__main__':
+  EpykMain.epyk_config = True
   print(index(True))
